@@ -2,9 +2,6 @@ import React from 'react';
 import './HomePage.css';
 import mainlogo from '../assets/sarathi.png'
 
-
-
-
 function Homepage() {
     return (
         <div>
