@@ -10,11 +10,9 @@
     "react": "^18.0.0",
     "react-bootstrap": "^2.2.2",
     "react-dom": "^18.0.0",
-    "react-geocode": "^0.2.3",
-    "react-particles-js": "^3.6.0",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+    "react-tsparticles": "^1.42.4",
+    "tsparticles": "^1.42.4",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },
@@ -41,5 +39,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhanjanMarthak/Snowdenfrontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhanjanMarthak/Snowdenfrontend/issues"
+  },
+  "homepage": "https://github.com/KhanjanMarthak/Snowdenfrontend#readme"
 }
