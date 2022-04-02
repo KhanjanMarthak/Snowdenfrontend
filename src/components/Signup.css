@@ -1,0 +1,14 @@
+.form-container.signup {
+    width:600px;
+}
+.flex-container-row{
+    display:flex;
+    gap:40px;
+}
+.input{
+    width:240px;
+}
+.input.address{
+    width:100%;
+    display:inline-block
+}

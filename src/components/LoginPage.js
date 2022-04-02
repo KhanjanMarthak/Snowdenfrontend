@@ -14,8 +14,16 @@ const LoginPage = () => {
         }),
         onSubmit:(values,{setSubmitting}) => {
             setSubmitting(false);
-            console.log(values)
-            formik.resetForm();
+          console.log(values);
+          const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({consumer: values})
+        };
+        fetch('http://2a04-14-99-102-226.ngrok.io/login', requestOptions)
+            .then(response => response.json())
+            .then(data => console.log(data));
+          formik.resetForm();
         },
         });
     return (
