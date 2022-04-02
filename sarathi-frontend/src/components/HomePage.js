@@ -1,6 +1,8 @@
 import React from 'react';
 import './HomePage.css';
-import mainlogo from '../assets/sarathi.png'
+import mainlogo from '../assets/sarathi.png';
+import particlesConfig from '../config/partical-config';
+// import Particles from 'react-particles-js';
 
 
 
@@ -21,11 +23,12 @@ function Homepage() {
 
             <div>
                 <div className='map_container'>
+                    <div className='signup_button'>
+                        <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Vendor</button>
+                        <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Customer</button>
+                    </div>
                 </div>
-                <div className='signup_button'>
-                    <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Vendor</button>
-                    <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Customer</button>
-                </div>
+
             </div>
 
             <div className='nav_container'>
