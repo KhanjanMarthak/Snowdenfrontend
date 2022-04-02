@@ -1,7 +1,8 @@
 import React from 'react';
 import './HomePage.css';
 import mainlogo from '../assets/sarathi.png';
-import particlesConfig from '../config/partical-config';
+import ParticlesConfig from '../config/ParticlesConfig';
+import Particles from 'react-particles-js';
 // import Particles from 'react-particles-js';
 
 
@@ -27,6 +28,7 @@ function Homepage() {
                         <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Vendor</button>
                         <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Customer</button>
                     </div>
+                    <Particles></Particles>
                 </div>
 
             </div>
