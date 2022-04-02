@@ -12,6 +12,7 @@
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.0",
     "react-tsparticles": "^1.42.4",
+    "tsparticles": "^1.42.4",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11"
   },
@@ -41,7 +42,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KhanjanMarthak/Snowdenfrontend.git"

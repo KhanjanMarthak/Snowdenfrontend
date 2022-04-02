@@ -17,7 +17,7 @@ function Homepage() {
                 <div><button className='btn btn-outline-dark login_btn'>LOGIN</button></div>
             </div>
             <div>
-
+                
             </div>
             <div>
                 <div className='map_container'>
