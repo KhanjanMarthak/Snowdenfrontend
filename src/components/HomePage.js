@@ -2,7 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import mainlogo from '../assets/sarathi.png';
 // import ParticcdlesConfig from '../config/ParticlesConfig';
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 // import Particles from 'react-particles-js';
 
 
@@ -24,11 +24,12 @@ function Homepage() {
 
             <div>
                 <div className='map_container'>
-                    <div className='signup_button'>
-                        <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Vendor</button>
-                        <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Customer</button>
-                    </div>
-                    <Particles></Particles>
+                    
+                    {/* <Particles></Particles> */}
+                </div>
+                <div className='signup_button'>
+                    <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Vendor</button>
+                    <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Customer</button>
                 </div>
 
             </div>
