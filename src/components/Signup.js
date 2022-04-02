@@ -14,64 +14,54 @@ const  Signup=()=>{
 
         },
         validationSchema: Yup.object({
+          fname: Yup.string()
+            .required("First name is required!"),
+          lname: Yup.string()
+            .required("Last name is required!"),
           email: Yup.string().email("Invalid email!").required("Email is required!"),
           phone: Yup.string()
-            .matches(phoneRegExp, "Phone number is not valid")
-            .required("phone number is required"),
-          password: Yup.string().min(8, "min 8 characters are required")
-          .required("Password is required"),
-          name: Yup.string()
-            .min(15, "min 15 characters are required")
-            .required("name is required"),
+            .matches(phoneRegExp, "Phone number is not valid!")
+            .required("Phone number is required!"),
+          address: Yup.string()
+            .required("Address is required!"),
+          password: Yup.string().min(8, "Min 8 characters are required!")
+          .required("Password is required!"),
           cpassword: Yup.string()
-            .oneOf([Yup.ref("password"), null], "Passwords must match")
-            .required("confirm password is required")
+            .oneOf([Yup.ref("password"), null], "Passwords must match!")
+            .required("Confirm password is required!")
         }),
         onSubmit: (values, { setSubmitting }) => {
           setSubmitting(false);
-        //   const detail = {
-        //     ...formik.values,
-        //     photo: photoString,
-        //   };
+          console.log(values);
           formik.resetForm();
         },
-       validateOnMount: false,
-       validateOnBlur: false,
-       validateOnChange: false,
       });
 
     return(
         <>
     <div className="form-container">
-        <div className="signup">Signup</div>
+        <div className="heading">Signup</div>
         <form className="flex-container form">
             <div className="flex-container input-container">
                 <label htmlFor="fname">First Name</label>
-                <input type="text" name="fname" {...formik.getFieldProps("name")}/>
+                <input type="text" name="fname" {...formik.getFieldProps("fname")}/>
+                {formik.touched.fname && formik.errors.fname ? (
+                    <p className="error">{formik.errors.fname}</p>
+                    ) : null}
             </div>
             <div className="flex-container input-container">
                 <label htmlFor="lname">Last Name</label>
-                <input type="text" name="lname"/>
-            </div>
-            <div className="flex-container input-container">
-                <label htmlFor="phone">Phone</label>
-                <input type="text" name="phone"/>
-            </div>
-            <div className="flex-container input-container">
-                <label htmlFor="address">Address</label>
-                <input type="text" name="adress"/>
+                <input type="text" name="lname" {...formik.getFieldProps("lname")}/>
+                {formik.touched.lname && formik.errors.lname ? (
+                    <p className="error">{formik.errors.lname}</p>
+                    ) : null}
             </div>
             <div className="flex-container input-container">
                 <label htmlFor="email">Email</label>
-                <input type="text" name="email"/>
-            </div>
-            <div className="flex-container input-container">
-                <label htmlFor="password">Password</label>
-                <input type="text" name="fname"/>
-            </div>
-            <div className="flex-container input-container">
-                <label htmlFor="cpassword">Confirm Password</label>
-                <input type="text" name="fname"/>
+                <input type="text" name="email" {...formik.getFieldProps("email")}/>
+                {formik.touched.email && formik.errors.email ? (
+                    <p className="error">{formik.errors.email}</p>
+                    ) : null}
             </div>
             <div className="flex-container input-container">
             <label htmlFor="cpassword">Services</label>
@@ -87,6 +77,36 @@ const  Signup=()=>{
                    <option>Cable</option>
                 </select>
             </div>
+            <div className="flex-container input-container">
+                <label htmlFor="phone">Phone</label>
+                <input type="text" name="phone" {...formik.getFieldProps("phone")}/>
+                {formik.touched.phone && formik.errors.phone ? (
+                    <p className="error">{formik.errors.phone}</p>
+                    ) : null}
+            </div>
+            <div className="flex-container input-container">
+                <label htmlFor="address">Address</label>
+                <input type="text" name="address" {...formik.getFieldProps("address")}/>
+                {formik.touched.address && formik.errors.address ? (
+                    <p className="error">{formik.errors.address}</p>
+                    ) : null}
+            </div>
+            
+            <div className="flex-container input-container">
+                <label htmlFor="password">Password</label>
+                <input type="text" name="password" {...formik.getFieldProps("password")}/>
+                {formik.touched.password && formik.errors.password ? (
+                    <p className="error">{formik.errors.password}</p>
+                    ) : null}
+            </div>
+            <div className="flex-container input-container">
+                <label htmlFor="cpassword">Confirm Password</label>
+                <input type="text" name="cpassword" {...formik.getFieldProps("cpassword")}/>
+                {formik.touched.cpassword && formik.errors.cpassword ? (
+                    <p className="error">{formik.errors.cpassword}</p>
+                    ) : null}
+            </div>
+            
             <button type="submit">Submit</button>
         </form>
     </div>
