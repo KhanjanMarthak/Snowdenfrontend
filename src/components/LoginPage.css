@@ -10,12 +10,12 @@
     margin-bottom:40px;
     margin-top: 30px;
 }
-input{
+input,select{
     background-color:white ;
     padding:7px 10px;
     border:1px solid black;
 }
-input:focus{
+input:focus,select:focus{
     outline:none;
 }
 .flex-container{
@@ -37,7 +37,10 @@ button {
     margin-top:30px;
     margin-bottom: 50px;
 }
+label {
+    text-align: start;
+}
 .error {
     color:red;
-    margin:0px;
+    text-align: start;
 }
