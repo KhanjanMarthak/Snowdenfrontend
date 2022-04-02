@@ -1,7 +1,7 @@
 import React from 'react';
 import './HomePage.css';
 import mainlogo from '../assets/sarathi.png';
-import ParticcdlesConfig from '../config/ParticlesConfig';
+// import ParticcdlesConfig from '../config/ParticlesConfig';
 import Particles from 'react-particles-js';
 // import Particles from 'react-particles-js';
 
