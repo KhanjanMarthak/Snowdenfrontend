@@ -1,12 +1,7 @@
 import React from 'react';
 import './HomePage.css';
 import mainlogo from '../assets/sarathi.png';
-// import ParticcdlesConfig from '../config/ParticlesConfig';
-// import Particles from 'react-particles-js';
-// import Particles from 'react-particles-js';
-
-
-
+import ParticlesConfig from '../config/ParticlesConfig';
 
 function Homepage() {
     return (
@@ -21,11 +16,12 @@ function Homepage() {
                 </div>
                 <div><button className='btn btn-outline-dark login_btn'>LOGIN</button></div>
             </div>
+            <div>
 
+            </div>
             <div>
                 <div className='map_container'>
-                    
-                    {/* <Particles></Particles> */}
+                    <ParticlesConfig />
                 </div>
                 <div className='signup_button'>
                     <button className='btn-secondary text-light btn-outline-dark'>SIGN UP As Vendor</button>
