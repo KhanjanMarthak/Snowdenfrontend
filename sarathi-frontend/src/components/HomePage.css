@@ -44,9 +44,18 @@
   margin: 0px 80px;
 }
 
-.map_container{
-    min-height: 800px;
-    background-image: url(../assets/map.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.map_container {
+  min-height: 800px;
+  background-image: url(../assets/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mainlogo {
+  width: 70px;
+}
+.login_btn {
+  background-color: #524f4f;
+  color: white;
+  font-weight: 400;
+  font-size: large;
 }
