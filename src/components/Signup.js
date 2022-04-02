@@ -11,7 +11,7 @@ const  Signup=()=>{
           address:"",
           password: "",
           cpassword: "",
-
+          services: ""
         },
         validationSchema: Yup.object({
           fname: Yup.string()
@@ -28,9 +28,11 @@ const  Signup=()=>{
           .required("Password is required!"),
           cpassword: Yup.string()
             .oneOf([Yup.ref("password"), null], "Passwords must match!")
-            .required("Confirm password is required!")
+            .required("Confirm password is required!"),
+          services: Yup.string().required("Please select service!")
         }),
         onSubmit: (values, { setSubmitting }) => {
+            //formik.touched.services=true;
           setSubmitting(false);
           console.log(values);
           formik.resetForm();
@@ -64,9 +66,9 @@ const  Signup=()=>{
                     ) : null}
             </div>
             <div className="flex-container input-container">
-            <label htmlFor="cpassword">Services</label>
-                <select>
-                    <option>Choose thye service</option>
+            <label htmlFor="services">Services</label>
+                <select {...formik.getFieldProps("services")}>
+                    <option>Choose the service</option>
                     <option>Electrician</option>
                     <option>Barber</option>
                     <option>Food services</option>
@@ -76,6 +78,9 @@ const  Signup=()=>{
                     <option>Cobbler</option>
                    <option>Cable</option>
                 </select>
+                {formik.touched.services && formik.errors.services ? (
+                    <p className="error">{formik.errors.services}</p>
+                    ) : null}
             </div>
             <div className="flex-container input-container">
                 <label htmlFor="phone">Phone</label>
@@ -94,14 +99,14 @@ const  Signup=()=>{
             
             <div className="flex-container input-container">
                 <label htmlFor="password">Password</label>
-                <input type="text" name="password" {...formik.getFieldProps("password")}/>
+                <input type="password" name="password" {...formik.getFieldProps("password")}/>
                 {formik.touched.password && formik.errors.password ? (
                     <p className="error">{formik.errors.password}</p>
                     ) : null}
             </div>
             <div className="flex-container input-container">
                 <label htmlFor="cpassword">Confirm Password</label>
-                <input type="text" name="cpassword" {...formik.getFieldProps("cpassword")}/>
+                <input type="password" name="cpassword" {...formik.getFieldProps("cpassword")}/>
                 {formik.touched.cpassword && formik.errors.cpassword ? (
                     <p className="error">{formik.errors.cpassword}</p>
                     ) : null}
