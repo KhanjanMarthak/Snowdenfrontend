@@ -5,7 +5,7 @@
     display:flex;
     gap:40px;
 }
-.input{
+.input,select{
     width:240px;
 }
 .input.address{

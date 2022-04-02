@@ -2,6 +2,7 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import Geocode from "react-geocode";
 import "./Signup.css";
+import "./LoginPage.css";
 
 Geocode.setApiKey("AIzaSyBkQwV1KPiWqgfQFD4OLYVxIw_DKiXo5NU");
 
