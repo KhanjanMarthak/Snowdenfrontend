@@ -20,7 +20,7 @@ const LoginPage = () => {
         });
     return (
         <div className="form-container">
-            <div className="login">Login</div>
+            <div className="heading">Login</div>
 
             <form onSubmit={formik.handleSubmit} className="flex-container form">
                 <div className="flex-container input-container">
