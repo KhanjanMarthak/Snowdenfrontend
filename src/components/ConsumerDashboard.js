@@ -3,13 +3,14 @@ import mainlogo from '../assets/sarathi.png';
 import profile from '../assets/user.png';
 import "./ConsumerDashboard.css";
 import favorite from '../assets/love.png'
+import social1 from '../assets/icons/github.png'
+import social2 from '../assets/icons/instagram.png'
+import social3 from '../assets/icons/linkedin.png'
+import social4 from '../assets/icons/youtube.png'
 
 function ConsumerDashboard() {
     return (
         <div>
-
-            {  }
-
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <span className="navbar-brand"><img className='mainlogo' src={mainlogo} alt='sarthi' /> Sarthi</span>
 
@@ -56,6 +57,60 @@ function ConsumerDashboard() {
                     </div>
                 </div>
             </nav>
+
+            <div className='map_container'>
+
+            </div>
+
+            <div className='tag_line'>
+                We Are here to manage your Daily life Services !!
+            </div>
+            <div className='deshbord_find_text'>
+                Find your Local Vendors Nearby
+            </div>
+
+
+            <div className='div_flex'>
+                <div className='dis_flex'>
+                    <div>Electrician</div>
+                    <div> Barber</div>
+                    <div> Food services</div>
+                    <div> General/Provision</div>
+                </div>
+                <div className='dis_flex'>
+                    <div> Medical</div>
+                    <div> Plumber</div>
+                    <div> Cobbler</div>
+                    <div> Cable</div>
+                </div>
+            </div>
+
+            <div className='footer_div'>
+                <span className='blur_text'>UPLIFT THE VOCAL FOR LOCAL CAMPAIGN WITH</span><br/>
+                <span className='team_name'>Tean SnowDen</span><br/>
+                <i>Connecting Vendors to you and helping your daily Life Problems</i><br/>
+
+                <button className='btn-primary btn_contact_us'> Contact Us </button><br/>
+
+                <i> © 2022, CodeFest at Simform</i><br/>
+                <div className='line_div'></div>
+                <div className='footer_section'>
+                    <div>logo</div>
+                    <div className='footer_sub_section'>
+                        <div>Team</div>
+                        <div>Home</div>
+                        <div>About US</div>
+                    </div>
+                    <div className='social_media'>
+                        <div><img src={social1} alt='social_icon'/></div>
+                        <div><img src={social2} alt='social_icon'/></div>
+                        <div><img src={social3} alt='social_icon'/></div>
+                        <div><img src={social4} alt='social_icon'/></div>
+                    </div>
+                </div>
+
+                <hr />
+            </div>
         </div>
     )
 }
