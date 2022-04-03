@@ -2,14 +2,15 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./LoginPage.css";
 import {useNavigate} from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 const LoginPage = () => {
     // let logged_in = false;
 
-    const [responseData, setResponseData] = useState({});
+    const [responseData, setResponseData] = useState(null);
+    
     
     const formik = useFormik({
         initialValues: {
@@ -32,17 +33,23 @@ const LoginPage = () => {
                 .then(response => response.json())
                 .then(
                     data => {
-                        console.log(data);
-                        setResponseData(JSON.stringify(data));
-                        console.log(responseData);
+                        setResponseData(data);  
                     });
         },
         });
+        let navigate = useNavigate();
 
-        let navigate = useNavigate(); 
-        const loginHandler = () =>{     
-          navigate('/login'); 
-        }
+        useEffect(() => {
+            console.log('called useEffect');
+            if(responseData && responseData.logged_in){
+                console.log("SUCCESS")
+                navigate('/home')
+            }   else {
+                console.log("fail")
+                navigate('/login')
+            } 
+        },[responseData])
+        
     return (
         <div className="form-container">
             <div className="heading">Login</div>
@@ -62,7 +69,7 @@ const LoginPage = () => {
                     <p className="error">{formik.errors.password}</p>
                     ) : null}
                 </div>
-                <button type="submit" onClick={loginHandler}>Login</button>
+                <button type="submit">Login</button>
             </form>
         </div>
     )
