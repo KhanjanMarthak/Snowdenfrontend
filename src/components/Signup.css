@@ -1,5 +1,10 @@
-.form-container.signup {
+.form-container.signup-consumer{
     width:600px;
+    margin:140px auto;
+}
+.form-container.signup-provider{
+    width:600px;
+    margin:90px auto;
 }
 .flex-container-row{
     display:flex;
