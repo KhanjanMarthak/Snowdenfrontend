@@ -7,9 +7,6 @@ import favorite from '../assets/love.png'
 function ConsumerDashboard() {
     return (
         <div>
-
-            {  }
-
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <span className="navbar-brand"><img className='mainlogo' src={mainlogo} alt='sarthi' /> Sarthi</span>
 
@@ -56,6 +53,61 @@ function ConsumerDashboard() {
                     </div>
                 </div>
             </nav>
+
+            <div className='map_container'>
+
+            </div>
+
+            <div className='tag_line'>
+                We Are here to manage your Daily life Services !!
+            </div>
+            <div className='deshbord_find_text'>
+                Find your Local Vendors Nearby
+            </div>
+
+
+            <div className='div_flex'>
+                <div className='dis_flex'>
+                    <div> Card View1</div>
+                    <div> Card View2</div>
+                    <div> Card View3</div>
+                    <div> Card View4</div>
+                </div>
+                <div className='dis_flex'>
+                    <div> Card View5</div>
+                    <div> Card View6</div>
+                    <div> Card View7</div>
+                    <div> Card View8</div>
+                </div>
+            </div>
+
+            <div className='footer_div'>
+                <span>UPLIFT THE VOCAL FOR LOCAL CAMPAIGN WITH</span>
+                <span>Tean SnowDen</span>
+                <span>Connecting Vendors to you and helping your daily Life Problems</span>
+
+                <button className='btn-primary'> Contact Us </button>
+
+                <i> © 2022, CodeFest at Simform</i>
+
+                <div className='footer_section'>
+                    <div>logo</div>
+                    <div className='footer_sub_section'>
+                        <div>Team</div>
+                        <div>Home</div>
+                        <div>About US</div>
+                    </div>
+                    <div className='social_media'>
+                        <div><img src=''/>
+                        </div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+
+                <hr />
+            </div>
         </div>
     )
 }

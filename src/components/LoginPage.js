@@ -3,15 +3,12 @@ import * as Yup from "yup";
 import "./LoginPage.css";
 import {useNavigate} from "react-router-dom";
 import { useEffect, useState } from "react";
+// import { useSelector } from 'react-redux';
 
 
 
 const LoginPage = () => {
-    // let logged_in = false;
-
     const [responseData, setResponseData] = useState(null);
-    
-    
     const formik = useFormik({
         initialValues: {
             email: "",

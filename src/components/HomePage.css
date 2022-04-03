@@ -33,9 +33,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00000028;
-    min-width: 100%;
-    min-height: inherit;
   }
   .signup_button button {
     position: relative;
@@ -71,7 +68,7 @@
     align-items: center;
     width: 100%;
     height: 70px;
-    background-color: #ff0000;
+    background-color: #f5f5f5;
     box-shadow: 0px 0px 10px #ccc;
     /* position: fixed; */
     /* top: 0; */
@@ -99,13 +96,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 100%;
-    min-height: inherit;
-    background-color: #00000028;
   }
   .signup_button button {
     position: relative;
-     background-color: #0a142f;
+    background-color: #524f4f;
     padding: 10px 20px 10px 20px;
     border-radius: 20px;
     font-weight: 500;
@@ -114,13 +108,16 @@
   }
 
   .map_container {
+    min-height: 800px;
+    background-image: url(../assets/map.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
   .mainlogo {
-    /* width: 70px; */
+    width: 70px;
   }
   .login_btn {
+    background-color: #524f4f;
     color: white;
     font-weight: 400;
     font-size: large;
