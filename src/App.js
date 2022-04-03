@@ -6,6 +6,7 @@ import Login from "./components/LoginPage";
 import HomePage from "./components/HomePage"
 import SignupConsumer from './components/SignupConsumer';
 import SignupProvider from './components/SignupProvider';
+import ConsumerDashboard from "./components/ConsumerDashboard";
 // import LoginPage from "./components/LoginPage";
 // import HomePage from './components/HomePage';
 
@@ -42,10 +43,11 @@ function App() {
           />
         </Routes>
       </BrowserRouter> */}
-      <SignupConsumer/>
+      <SignupConsumer />
       <SignupProvider />
       <Login />
-      <HomePage/>
+      <HomePage />
+      <ConsumerDashboard />
     </div>
   );
 }
