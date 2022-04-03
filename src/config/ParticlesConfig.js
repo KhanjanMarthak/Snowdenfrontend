@@ -20,7 +20,6 @@ function ParticlesConfig() {
             options={{
                 background: {
                     color: {
-
                     },
                 },
                 fpsLimit: 60,

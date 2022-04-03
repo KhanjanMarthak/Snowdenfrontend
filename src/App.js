@@ -7,6 +7,7 @@ import SignupProvider from './components/SignupProvider';
 import ConsumerDashboard from "./components/ConsumerDashboard";
 import LoginPage from "./components/LoginPage";
 import HomePage from './components/HomePage';
+import MapPage from "./components/MapFile";
 
 function App() {
   return (
@@ -19,6 +20,14 @@ function App() {
             element={
               <PrivateRoute value={"/home"}>
                 <HomePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard/map"
+            element={
+              <PrivateRoute value={"/dashboard/map"}>
+                <MapPage />
               </PrivateRoute>
             }
           />
@@ -50,6 +59,14 @@ function App() {
             path="/login"
             element={
               <PrivateRoute value={"/login"}>
+                <LoginPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <PrivateRoute value={"/home"}>
                 <LoginPage />
               </PrivateRoute>
             }

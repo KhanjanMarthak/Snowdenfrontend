@@ -23,10 +23,13 @@ const LoginPage = () => {
             formik.resetForm();
             const requestOptions = {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json', "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Credentials": true
+},
                 body: JSON.stringify({consumer:values})
             };
-            fetch('https://8062-14-99-102-226.ngrok.io/login', requestOptions)
+            fetch("https://snowden-backend-api.herokuapp.com/login", requestOptions)
                 .then(response => response.json())
                 .then(
                     data => {
@@ -37,9 +40,12 @@ const LoginPage = () => {
         let navigate = useNavigate();
 
         useEffect(() => {
+            console.log('called useEffect');
             if(responseData && responseData.logged_in){
+                console.log("SUCCESS")
                 navigate('/dashboard/user')
             }   else {
+                console.log("fail")
                 navigate('/login')
             } 
         },[navigate, responseData])

@@ -19,7 +19,7 @@ const SignupProvider = () => {
           phone: "",
           address:"",
           password: "",
-          cpassword: "",
+          password_confirmation: "",
         },
         validationSchema: Yup.object({
           first_name: Yup.string()
@@ -37,7 +37,7 @@ const SignupProvider = () => {
             .required("Address is required!"),
           password: Yup.string().min(8, "Min 8 characters are required!")
           .required("Password is required!"),
-          cpassword: Yup.string()
+          password_confirmation: Yup.string()
             .oneOf([Yup.ref("password"), null], "Passwords must match!")
             .required("Confirm password is required!"),
         }),
@@ -53,7 +53,7 @@ const SignupProvider = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({consumer: values})
             };
-              fetch('', requestOptions)
+              fetch("https://snowden-backend-api.herokuapp.com/service_providers", requestOptions)
                   .then(response => response.json())
                   .then(data => console.log(data));
               },
@@ -168,10 +168,10 @@ const SignupProvider = () => {
                         ) : null}
                 </div>
                 <div className="flex-container input-container">
-                    <label htmlFor="cpassword">Confirm Password</label>
-                    <input type="password" name="cpassword" className="input" {...formik.getFieldProps("cpassword")}/>
-                    {formik.touched.cpassword && formik.errors.cpassword ? (
-                        <p className="error">{formik.errors.cpassword}</p>
+                    <label htmlFor="password_confirmation">Confirm Password</label>
+                    <input type="password" name="password_confirmation" className="input" {...formik.getFieldProps("password_confirmation")}/>
+                    {formik.touched.password_confirmation && formik.errors.password_confirmation ? (
+                        <p className="error">{formik.errors.password_confirmation}</p>
                         ) : null}
                 </div>
               </div>

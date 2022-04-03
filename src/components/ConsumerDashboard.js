@@ -1,14 +1,22 @@
-import React from 'react'
+import React from 'react';
 import mainlogo from '../assets/sarathi.png';
 import profile from '../assets/user.png';
 import "./ConsumerDashboard.css";
-import favorite from '../assets/love.png'
-import social1 from '../assets/icons/github.png'
-import social2 from '../assets/icons/instagram.png'
-import social3 from '../assets/icons/linkedin.png'
-import social4 from '../assets/icons/youtube.png'
+import { useNavigate } from "react-router-dom";
+import favorite from '../assets/love.png';
+import social1 from '../assets/icons/github.png';
+import social2 from '../assets/icons/instagram.png';
+import social3 from '../assets/icons/linkedin.png';
+import social4 from '../assets/icons/youtube.png';
 
 function ConsumerDashboard() {
+    let navigate = useNavigate();
+    const logoutHandler = () => {
+        navigate('/home');
+    }
+    const clickHandler = () => {
+        navigate('/dashboard/map');
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,7 +61,7 @@ function ConsumerDashboard() {
                         <div className="btn  my-2 my-sm-0 my_btn" type="submit">
                             <img className="profilephoto" src={favorite} alt="myimage" />
                         </div>
-                        <button className="btn btn-outline-success my-2 my-sm-0 my_btn" type="submit">Logout</button>
+                        <button className="btn btn-outline-success my-2 my-sm-0 my_btn" type="submit" onClick={logoutHandler}>Logout</button>
                     </div>
                 </div>
             </nav>
@@ -72,40 +80,39 @@ function ConsumerDashboard() {
 
             <div className='div_flex'>
                 <div className='dis_flex'>
-                    <div>Electrician</div>
-                    <div> Barber</div>
-                    <div> Food services</div>
-                    <div> General/Provision</div>
+                    <div className='services' onClick={clickHandler}>Electrician</div>
+                    <div className='services' onClick={clickHandler}> Barber</div>
+                    <div className='services' onClick={clickHandler}> Food services</div>
+                    <div className='services' onClick={clickHandler}> General/Provision</div>
                 </div>
                 <div className='dis_flex'>
-                    <div> Medical</div>
-                    <div> Plumber</div>
-                    <div> Cobbler</div>
-                    <div> Cable</div>
+                    <div className='services' onClick={clickHandler}> Medical</div>
+                    <div className='services' onClick={clickHandler}> Plumber</div>
+                    <div className='services' onClick={clickHandler}> Cobbler</div>
+                    <div className='services' onClick={clickHandler}> Cable</div>
                 </div>
             </div>
 
             <div className='footer_div'>
-                <span className='blur_text'>UPLIFT THE VOCAL FOR LOCAL CAMPAIGN WITH</span><br/>
-                <span className='team_name'>Tean SnowDen</span><br/>
-                <i>Connecting Vendors to you and helping your daily Life Problems</i><br/>
+                <span className='blur_text'>UPLIFT THE VOCAL FOR LOCAL CAMPAIGN WITH</span><br />
+                <span className='team_name'>Tean SnowDen</span><br />
+                <i>Connecting Vendors to you and helping your daily Life Problems</i><br />
 
-                <button className='btn-primary btn_contact_us'> Contact Us </button><br/>
+                <button className='btn-primary btn_contact_us'> Contact Us </button><br />
 
-                <i> © 2022, CodeFest at Simform</i><br/>
+                <i> © 2022, CodeFest at Simform</i><br />
+                <div className='footer_sub_section'>
+                    <div>Team</div>
+                    <div>Home</div>
+                    <div>About US</div>
+                </div>
                 <div className='line_div'></div>
                 <div className='footer_section'>
-                    <div>logo</div>
-                    <div className='footer_sub_section'>
-                        <div>Team</div>
-                        <div>Home</div>
-                        <div>About US</div>
-                    </div>
                     <div className='social_media'>
-                        <div><img src={social1} alt='social_icon'/></div>
-                        <div><img src={social2} alt='social_icon'/></div>
-                        <div><img src={social3} alt='social_icon'/></div>
-                        <div><img src={social4} alt='social_icon'/></div>
+                        <div><img className='image_size' src={social1} alt='social_icon' /></div>
+                        <div><img className='image_size' src={social2} alt='social_icon' /></div>
+                        <div><img className='image_size' src={social3} alt='social_icon' /></div>
+                        <div><img className='image_size' src={social4} alt='social_icon' /></div>
                     </div>
                 </div>
 
