@@ -1,9 +1,10 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import PrivateRoute from './components/PrivateRoute';
 import SignupConsumer from './components/SignupConsumer';
 import SignupProvider from './components/SignupProvider';
+import ConsumerDashboard from "./components/ConsumerDashboard";
 import LoginPage from "./components/LoginPage";
 import HomePage from './components/HomePage';
 
@@ -16,8 +17,16 @@ function App() {
           <Route
             path="/home"
             element={
-              <PrivateRoute  value={"/home"}>
+              <PrivateRoute value={"/home"}>
                 <HomePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard/user"
+            element={
+              <PrivateRoute value={"/dashboard/user"}>
+                <ConsumerDashboard />
               </PrivateRoute>
             }
           />
@@ -37,7 +46,7 @@ function App() {
               </PrivateRoute>
             }
           />
-           <Route
+          <Route
             path="/login"
             element={
               <PrivateRoute value={"/login"}>
@@ -46,12 +55,13 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter> 
+      </BrowserRouter>
+      {/* <ConsumerDashboard /> */}
       {/* <SignupConsumer/>
       <SignupProvider />
       <Login />
       <HomePage/> */}
-    </div>
+    </div >
   );
 }
 

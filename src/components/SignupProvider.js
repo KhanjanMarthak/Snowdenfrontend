@@ -92,20 +92,20 @@ const SignupProvider = () => {
                         ) : null}
                 </div>
                 <div className="flex-container input-container">
-                <label htmlFor="end_time">end_time</label>
-                    <select {...formik.getFieldProps("end_time")}>
+                <label htmlFor="services">Select the service</label>
+                    <select {...formik.getFieldProps("services")}>
                         <option>Choose the service</option>
                         <option>Electrician</option>
                         <option>Barber</option>
-                        <option>Food end_time</option>
+                        <option>Food services</option>
                         <option>General/Provision</option>
                         <option>Medical</option>
                         <option>Plumber</option>
                         <option>Cobbler</option>
                       <option>Cable</option>
                     </select>
-                    {formik.touched.end_time && formik.errors.end_time ? (
-                        <p className="error">{formik.errors.end_time}</p>
+                    {formik.touched.services && formik.errors.services ? (
+                        <p className="error">{formik.errors.services}</p>
                         ) : null}
                 </div>
               </div>

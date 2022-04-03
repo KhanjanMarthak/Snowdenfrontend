@@ -43,12 +43,12 @@ const LoginPage = () => {
             console.log('called useEffect');
             if(responseData && responseData.logged_in){
                 console.log("SUCCESS")
-                navigate('/home')
+                navigate('/dashboard/user')
             }   else {
                 console.log("fail")
                 navigate('/login')
             } 
-        },[responseData])
+        },[navigate, responseData])
         
     return (
         <div className="form-container">
