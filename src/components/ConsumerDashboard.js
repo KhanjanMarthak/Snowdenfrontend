@@ -3,6 +3,10 @@ import mainlogo from '../assets/sarathi.png';
 import profile from '../assets/user.png';
 import "./ConsumerDashboard.css";
 import favorite from '../assets/love.png'
+import social1 from '../assets/icons/github.png'
+import social2 from '../assets/icons/instagram.png'
+import social3 from '../assets/icons/linkedin.png'
+import social4 from '../assets/icons/youtube.png'
 
 function ConsumerDashboard() {
     return (
@@ -68,28 +72,28 @@ function ConsumerDashboard() {
 
             <div className='div_flex'>
                 <div className='dis_flex'>
-                    <div> Card View1</div>
-                    <div> Card View2</div>
-                    <div> Card View3</div>
-                    <div> Card View4</div>
+                    <div>Electrician</div>
+                    <div> Barber</div>
+                    <div> Food services</div>
+                    <div> General/Provision</div>
                 </div>
                 <div className='dis_flex'>
-                    <div> Card View5</div>
-                    <div> Card View6</div>
-                    <div> Card View7</div>
-                    <div> Card View8</div>
+                    <div> Medical</div>
+                    <div> Plumber</div>
+                    <div> Cobbler</div>
+                    <div> Cable</div>
                 </div>
             </div>
 
             <div className='footer_div'>
-                <span>UPLIFT THE VOCAL FOR LOCAL CAMPAIGN WITH</span>
-                <span>Tean SnowDen</span>
-                <span>Connecting Vendors to you and helping your daily Life Problems</span>
+                <span className='blur_text'>UPLIFT THE VOCAL FOR LOCAL CAMPAIGN WITH</span><br/>
+                <span className='team_name'>Tean SnowDen</span><br/>
+                <i>Connecting Vendors to you and helping your daily Life Problems</i><br/>
 
-                <button className='btn-primary'> Contact Us </button>
+                <button className='btn-primary btn_contact_us'> Contact Us </button><br/>
 
-                <i> © 2022, CodeFest at Simform</i>
-
+                <i> © 2022, CodeFest at Simform</i><br/>
+                <div className='line_div'></div>
                 <div className='footer_section'>
                     <div>logo</div>
                     <div className='footer_sub_section'>
@@ -98,11 +102,10 @@ function ConsumerDashboard() {
                         <div>About US</div>
                     </div>
                     <div className='social_media'>
-                        <div><img src=''/>
-                        </div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div><img src={social1} alt='social_icon'/></div>
+                        <div><img src={social2} alt='social_icon'/></div>
+                        <div><img src={social3} alt='social_icon'/></div>
+                        <div><img src={social4} alt='social_icon'/></div>
                     </div>
                 </div>
 

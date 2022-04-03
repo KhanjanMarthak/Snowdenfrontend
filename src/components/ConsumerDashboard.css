@@ -116,6 +116,8 @@
 }
 .dis_flex {
   display: flex;
+   justify-content: space-between;
+  align-items: center
 }
 
 .tag_line {
@@ -140,4 +142,31 @@
   color: white;
   padding: 20px;
   margin-top: 50px;
+  display: flex;
+   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn_contact_us{
+  border-radius: 15px;
+  margin: 5px;
+  margin: 30px;
+}
+.blur_text{
+  color: #9DA1AC;
+  font-size: small;
+  font-weight: 800;
+}
+.team_name{
+  font-size: 40px;
+  font-weight: 400;
+}
+.line_div{
+  border: 1px solid white;
+  width: 60%;
+}
+.social_media{
+  display: flex;
+  flex-direction: row;
 }
