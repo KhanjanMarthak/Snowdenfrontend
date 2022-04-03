@@ -47,7 +47,7 @@ const SignupConsumer = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ consumer: values })
           };
-          fetch('http://2a04-14-99-102-226.ngrok.io/consumers', requestOptions)
+          fetch('https://snowden-backend-api.herokuapp.com/consumers', requestOptions)
             .then(response => response.json())
             .then(data => console.log(data));
         },

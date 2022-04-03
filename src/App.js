@@ -6,6 +6,7 @@ import SignupConsumer from './components/SignupConsumer';
 import SignupProvider from './components/SignupProvider';
 import LoginPage from "./components/LoginPage";
 import HomePage from './components/HomePage';
+import VendorDashBoard from './components/VendorDashBoard';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
+          <Route path="/vendordashboard" element={<VendorDashBoard/>} />
           <Route
             path="/home"
             element={
@@ -38,6 +40,14 @@ function App() {
             }
           />
            <Route
+            path="/login"
+            element={
+              <PrivateRoute value={"/login"}>
+                <LoginPage />
+              </PrivateRoute>
+            }
+          />
+            <Route
             path="/login"
             element={
               <PrivateRoute value={"/login"}>
