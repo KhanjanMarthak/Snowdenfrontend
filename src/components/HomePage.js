@@ -49,7 +49,7 @@ function Homepage() {
             <div>
                 <div>
                     <div className='map_container'>
-                        <ParticlesConfig id="tsparticles" />
+                        <ParticlesConfig />
                         <img className='mymap' src={mymap} alt='sarthi'>
                         </img>
                         <div className='signup_button'>

@@ -3,10 +3,7 @@ import './UserProfile.css';
 
 
 function UserProfile(props) {
-
-    // let userimg = props.userimage;
     console.log('');
-    // console.log(props);
 
     return (
 

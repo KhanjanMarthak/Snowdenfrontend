@@ -2,11 +2,18 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import Geocode from "react-geocode";
 import "./Signup.css";
+import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
+import { Navigate } from "react-router";
 
 Geocode.setApiKey("AIzaSyBkQwV1KPiWqgfQFD4OLYVxIw_DKiXo5NU");
 
 const SignupConsumer = () => {
+  let navigate = useNavigate();
+
+  const signupHandler = () => {
+    navigate('/login');
+  }
   const phoneRegExp = /^[6-9]\d{9}$/;
   const formik = useFormik({
     initialValues: {
@@ -16,7 +23,7 @@ const SignupConsumer = () => {
       phone: "",
       address: "",
       password: "",
-      cpassword: "",
+      password_confirmation: "",
     },
     validationSchema: Yup.object({
       first_name: Yup.string()
@@ -31,7 +38,7 @@ const SignupConsumer = () => {
         .required("Address is required!"),
       password: Yup.string().min(8, "Min 8 characters are required!")
         .required("Password is required!"),
-      cpassword: Yup.string()
+      password_confirmation: Yup.string()
         .oneOf([Yup.ref("password"), null], "Passwords must match!")
         .required("Confirm password is required!"),
     }),
@@ -44,10 +51,13 @@ const SignupConsumer = () => {
           values.longitude = Number(lng);
           const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',"Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Credentials": true
+},
             body: JSON.stringify({ consumer: values })
           };
-          fetch('http://2a04-14-99-102-226.ngrok.io/consumers', requestOptions)
+          fetch('https://snowden-backend-api.herokuapp.com/consumers', requestOptions)
             .then(response => response.json())
             .then(data => console.log(data));
         },
@@ -111,14 +121,14 @@ const SignupConsumer = () => {
               ) : null}
             </div>
             <div className="flex-container input-container">
-              <label htmlFor="cpassword">Confirm Password</label>
-              <input type="password" name="cpassword" className="input" {...formik.getFieldProps("cpassword")} />
-              {formik.touched.cpassword && formik.errors.cpassword ? (
-                <p className="error">{formik.errors.cpassword}</p>
+              <label htmlFor="password_confirmation">Confirm Password</label>
+              <input type="password" name="password_confirmation" className="input" {...formik.getFieldProps("password_confirmation")} />
+              {formik.touched.password_confirmation && formik.errors.password_confirmation ? (
+                <p className="error">{formik.errors.password_confirmation}</p>
               ) : null}
             </div>
           </div>
-          <button type="submit">Sign up</button>
+          <button type="submit" onClick={signupHandler}>Sign up</button>
         </form>
       </div>
     </>
