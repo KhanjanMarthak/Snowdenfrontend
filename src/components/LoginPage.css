@@ -1,5 +1,5 @@
 .form-container{
-    margin:260px auto;
+    margin:225px auto;
     padding: 20px 40px;
     width: 400px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -10,12 +10,12 @@
     margin-bottom:40px;
     margin-top: 30px;
 }
-input{
+input,select{
     background-color:white ;
     padding:7px 10px;
     border:1px solid black;
 }
-input:focus{
+input:focus,.select:focus{
     outline:none;
 }
 .flex-container{
@@ -39,5 +39,8 @@ button {
 }
 .error {
     color:red;
-    margin:0px;
+    text-align: left;
+}
+label{
+    text-align: left;
 }

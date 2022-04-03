@@ -1,19 +1,16 @@
-// import logo from './logo.svg';
-// import './App.css';
-// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-// import PrivateRoute from './components/PrivateRoute';
-import Login from "./components/LoginPage";
-import HomePage from "./components/HomePage"
+import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import PrivateRoute from './components/PrivateRoute';
 import SignupConsumer from './components/SignupConsumer';
 import SignupProvider from './components/SignupProvider';
-// import LoginPage from "./components/LoginPage";
-// import HomePage from './components/HomePage';
+import LoginPage from "./components/LoginPage";
+import HomePage from './components/HomePage';
 
 function App() {
-  // const loggedIn=false;
   return (
     <div className="App">
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
           <Route
@@ -25,10 +22,18 @@ function App() {
             }
           />
           <Route
-            path="/signup"
+            path="/signup/user"
             element={
-              <PrivateRoute value={"/signup"}>
-                <Signup />
+              <PrivateRoute value={"/signup/user"}>
+                <SignupConsumer />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/signup/vendor"
+            element={
+              <PrivateRoute value={"/signup/vendor"}>
+                <SignupProvider />
               </PrivateRoute>
             }
           />
@@ -41,11 +46,11 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter> */}
-      <SignupConsumer/>
+      </BrowserRouter> 
+      {/* <SignupConsumer/>
       <SignupProvider />
       <Login />
-      <HomePage/>
+      <HomePage/> */}
     </div>
   );
 }

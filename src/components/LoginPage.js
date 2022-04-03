@@ -1,8 +1,16 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./LoginPage.css"
+import "./LoginPage.css";
+import {useNavigate} from "react-router-dom";
+import { useState } from "react";
+
+
 
 const LoginPage = () => {
+    // let logged_in = false;
+
+    const [responseData, setResponseData] = useState({});
+    
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -14,10 +22,27 @@ const LoginPage = () => {
         }),
         onSubmit:(values,{setSubmitting}) => {
             setSubmitting(false);
-            console.log(values)
             formik.resetForm();
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({consumer:values})
+            };
+            fetch('https://8062-14-99-102-226.ngrok.io/login', requestOptions)
+                .then(response => response.json())
+                .then(
+                    data => {
+                        console.log(data);
+                        setResponseData(JSON.stringify(data));
+                        console.log(responseData);
+                    });
         },
         });
+
+        let navigate = useNavigate(); 
+        const loginHandler = () =>{     
+          navigate('/login'); 
+        }
     return (
         <div className="form-container">
             <div className="heading">Login</div>
@@ -37,7 +62,7 @@ const LoginPage = () => {
                     <p className="error">{formik.errors.password}</p>
                     ) : null}
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" onClick={loginHandler}>Login</button>
             </form>
         </div>
     )

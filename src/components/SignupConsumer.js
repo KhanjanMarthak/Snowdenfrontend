@@ -58,8 +58,8 @@ const SignupConsumer = () => {
 
   return (
     <>
-      <div className="form-container signup">
-        <div className="heading">Signup</div>
+      <div className="form-container signup-consumer">
+        <div className="heading">Signup as Consumer</div>
         <form onSubmit={formik.handleSubmit} className="flex-container form">
           <div className="flex-container-row">
             <div className="flex-container input-container">
