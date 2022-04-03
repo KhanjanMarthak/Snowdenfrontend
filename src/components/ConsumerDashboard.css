@@ -22,33 +22,7 @@
   .nav_mid_iteams div {
     padding: 20px;
   }
-  .map_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    background-color: #ccc;
-  }
-  .signup_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .signup_button button {
-    position: relative;
-    background-color: #524f4f;
-    padding: 10px 20px 10px 20px;
-    border-radius: 20px;
-    font-weight: 500;
-    font-size: large;
-    margin: 0px 80px;
-  }
-
-  .map_container {
-    min-height: 800px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
   .mainlogo {
     width: 70px;
   }
@@ -84,34 +58,7 @@
   .nav_mid_iteams div {
     padding: 20px;
   }
-  .map_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    background-color: #ccc;
-  }
-  .signup_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .signup_button button {
-    position: relative;
-    background-color: #524f4f;
-    padding: 10px 20px 10px 20px;
-    border-radius: 20px;
-    font-weight: 500;
-    font-size: large;
-    margin: 0px 80px;
-  }
-
-  .map_container {
-    min-height: 800px;
-    background-image: url(../assets/map.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
   .mainlogo {
     width: 70px;
   }

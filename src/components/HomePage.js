@@ -59,6 +59,12 @@ function Homepage() {
                     </div>
                 </div>
             </div>
+            <div className='footer_backgrounnd'>
+                <div className='footer_home'>
+                    {/* <img className='mainlogo' src={mainlogo} alt='sarthi' /> */}
+                    - Team: SnowDen
+                </div>
+            </div>
 
         </div>
 

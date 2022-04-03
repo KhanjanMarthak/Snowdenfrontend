@@ -3,6 +3,8 @@
   padding: 20px 40px;
   width: 400px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow-y: hidden;
+  padding-bottom:60px;
 }
 .heading {
   text-align: center;
@@ -36,6 +38,7 @@ button {
   background-color: #0a142f;
   font-size: 20px;
   color: white;
+  margin-top:25px;
 }
 .error {
   color: red;
@@ -43,4 +46,5 @@ button {
 }
 label {
   text-align: left;
+  margin:0px;
 }
