@@ -26,7 +26,7 @@ const LoginPage = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({consumer:values})
             };
-            fetch('https://8062-14-99-102-226.ngrok.io/login', requestOptions)
+            fetch('https://snowden-backend-api.herokuapp.com/login', requestOptions)
                 .then(response => response.json())
                 .then(
                     data => {

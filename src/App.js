@@ -8,6 +8,8 @@ import ConsumerDashboard from "./components/ConsumerDashboard";
 import LoginPage from "./components/LoginPage";
 import HomePage from './components/HomePage';
 import MapPage from "./components/MapFile";
+import VendorDashboard from './components/VendorDashboard';
+import VendorDashBoard from './components/VendorDashboard';
 
 function App() {
   return (
@@ -36,6 +38,14 @@ function App() {
             element={
               <PrivateRoute value={"/dashboard/user"}>
                 <ConsumerDashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/dashboard/provider"
+            element={
+              <PrivateRoute value={"/dashboard/provider"}>
+                <VendorDashboard />
               </PrivateRoute>
             }
           />
